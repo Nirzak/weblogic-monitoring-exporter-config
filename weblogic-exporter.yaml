@@ -15,8 +15,10 @@ queries:
       servlets:
         prefix: weblogic_servlet_
         key: servletName
-
-- JVMRuntime:
+        
+- key: name
+  keyName: server
+  JVMRuntime:
     prefix: wls_jvm_
     key: name
 
@@ -51,10 +53,14 @@ queries:
 - persistentStoreRuntimes:
     prefix: wls_persistentstore_
     key: name
-- JDBCServiceRuntime:
+
+- key: name
+  keyName: server
+  JDBCServiceRuntime:
     JDBCDataSourceRuntimeMBeans:
       prefix: wls_datasource_
       key: name
+
 - JTARuntime:
     prefix: wls_jta_
     key: name
