@@ -15,29 +15,37 @@ queries:
       servlets:
         prefix: weblogic_servlet_
         key: servletName
-        
+
 - key: name
   keyName: server
   JVMRuntime:
     prefix: wls_jvm_
     key: name
 
-- executeQueueRuntimes:
+- key: name
+  keyName: server
+  executeQueueRuntimes:
     prefix: wls_socketmuxer_
     key: name
     values: [pendingRequestCurrentCount]
 
-- workManagerRuntimes:
+- key: name
+  keyName: server
+  workManagerRuntimes:
     prefix: wls_workmanager_
     key: name
     values: [stuckThreadCount, pendingRequests, completedRequests]
 
-- threadPoolRuntime:
+- key: name
+  keyName: server
+  threadPoolRuntime:
     prefix: wls_threadpool_
     key: name
     values: [executeThreadTotalCount, queueLength, stuckThreadCount, hoggingThreadCount]
 
-- JMSRuntime:
+- key: name
+  keyName: server
+  JMSRuntime:
     key: name
     keyName: jmsruntime
     prefix: wls_jmsruntime_
@@ -50,7 +58,9 @@ queries:
         key: name
         keyName: destination
 
-- persistentStoreRuntimes:
+- key: name
+  keyName: server
+  persistentStoreRuntimes:
     prefix: wls_persistentstore_
     key: name
 
@@ -60,7 +70,8 @@ queries:
     JDBCDataSourceRuntimeMBeans:
       prefix: wls_datasource_
       key: name
-
-- JTARuntime:
+- key: name
+  keyName: server
+  JTARuntime:
     prefix: wls_jta_
     key: name
