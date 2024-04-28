@@ -44,7 +44,7 @@ queries:
   threadPoolRuntime:
     prefix: weblogic_threadpool_
     key: name
-    values: [executeThreadTotalCount, queueLength, stuckThreadCount, hoggingThreadCount]
+    values: [executeThreadTotalCount, queueLength, stuckThreadCount, hoggingThreadCount, overloadRejectedRequestsCount,throughput]
 
 - key: name
   keyName: server
