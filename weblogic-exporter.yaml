@@ -3,12 +3,12 @@ domainQualifier: true
 queries:
 - key: name
   keyName: server
-  prefix: wls_server_
+  prefix: weblogic_server_
   applicationRuntimes:
     key: name
     keyName: app
     componentRuntimes:
-      prefix: webapp_config_
+      prefix: weblogic_application_webcomponent_
       type: WebAppComponentRuntime
       key: name
       values: [deploymentState, contextRoot, sourceInfo, openSessionsHighCount, openSessionsCurrentCount, sessionsOpenedTotalCount, sessionCookieMaxAgeSecs, sessionInvalidationIntervalSecs, sessionTimeoutSecs, singleThreadedServletPoolSize, sessionIDLength, servletReloadCheckSecs, jSPPageCheckSecs]
@@ -19,27 +19,27 @@ queries:
 - key: name
   keyName: server
   JVMRuntime:
-    prefix: wls_jvm_
+    prefix: weblogic_jvm_
     key: name
 
 - key: name
   keyName: server
   executeQueueRuntimes:
-    prefix: wls_socketmuxer_
+    prefix: weblogic_socketmuxer_
     key: name
     values: [pendingRequestCurrentCount]
 
 - key: name
   keyName: server
   workManagerRuntimes:
-    prefix: wls_workmanager_
+    prefix: weblogic_workmanager_
     key: name
     values: [stuckThreadCount, pendingRequests, completedRequests]
 
 - key: name
   keyName: server
   threadPoolRuntime:
-    prefix: wls_threadpool_
+    prefix: weblogic_threadpool_
     key: name
     values: [executeThreadTotalCount, queueLength, stuckThreadCount, hoggingThreadCount]
 
@@ -68,7 +68,7 @@ queries:
   keyName: server
   JDBCServiceRuntime:
     JDBCDataSourceRuntimeMBeans:
-      prefix: wls_datasource_
+      prefix: weblogic_jdbcdatasource_
       key: name
 - key: name
   keyName: server
