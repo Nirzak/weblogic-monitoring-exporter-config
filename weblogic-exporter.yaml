@@ -37,7 +37,7 @@ queries:
     workManagerRuntimes:
       prefix: weblogic_workmanager_
       key: name
-      values: [stuckThreadCount, pendingRequests, completedRequests]
+      values: [completedDaemonRequests, stuckThreadCount, pendingRequests, completedRequests, pendingDaemonRequests]
 
 - key: name
   keyName: server
