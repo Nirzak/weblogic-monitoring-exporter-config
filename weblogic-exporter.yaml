@@ -31,10 +31,13 @@ queries:
 
 - key: name
   keyName: server
-  workManagerRuntimes:
-    prefix: weblogic_workmanager_
+  applicationRuntimes:
     key: name
-    values: [stuckThreadCount, pendingRequests, completedRequests]
+    keyName: app
+    workManagerRuntimes:
+      prefix: weblogic_workmanager_
+      key: name
+      values: [stuckThreadCount, pendingRequests, completedRequests]
 
 - key: name
   keyName: server
